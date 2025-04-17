@@ -1,7 +1,7 @@
 # Adham Desouky's Portfolio
 
 <p align="center">
-  <img src="public/screen.png" alt="Screenshot" width="200"/>
+  <img src="public/image/screen.png" alt="Screenshot" width="200"/>
 </p>
 
 A modern, responsive portfolio website built with Next.js, showcasing my skills, projects, and professional experience.
