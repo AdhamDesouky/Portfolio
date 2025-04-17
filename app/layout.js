@@ -13,6 +13,15 @@ export const metadata = {
   title: "Adham Desouky - Biomedical Informatics Student | AI & Full-Stack Developer",
   description:
     "Portfolio of Adham Ahmed Desouky, a Biomedical Informatics student at Nile University. Experienced in AI healthcare tools, full-stack development, and data-driven solutions with a real-world clinical focus.",
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png' },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
