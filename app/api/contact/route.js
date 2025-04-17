@@ -4,14 +4,17 @@ import nodemailer from 'nodemailer';
 
 // Create and configure Nodemailer transporter
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
   host: 'smtp.gmail.com',
   port: 587,
-  secure: false, 
+  secure: false,
   auth: {
+    type: 'login',
     user: process.env.EMAIL_ADDRESS,
-    pass: process.env.GMAIL_PASSKEY, 
+    pass: process.env.GMAIL_PASSKEY,
   },
+  tls: {
+    rejectUnauthorized: false
+  }
 });
 
 // Helper function to send a message via Telegram
