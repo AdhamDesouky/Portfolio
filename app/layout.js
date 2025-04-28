@@ -1,4 +1,5 @@
 import { GoogleTagManager } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,17 +11,13 @@ import "./css/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Adham Desouky - Biomedical Informatics Student | AI & Full-Stack Developer",
+  title:
+    "Adham Desouky - Biomedical Informatics Student | AI & Full-Stack Developer",
   description:
     "Portfolio of Adham Ahmed Desouky, a Biomedical Informatics student at Nile University. Experienced in AI healthcare tools, full-stack development, and data-driven solutions with a real-world clinical focus.",
   icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/icon.png', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-icon.png' },
-    ],
+    icon: [{ url: "/favicon.ico" }, { url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png" }],
   },
 };
 
@@ -35,6 +32,7 @@ export default function RootLayout({ children }) {
           <ScrollToTop />
         </main>
         <Footer />
+        <Analytics />
       </body>
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
     </html>
